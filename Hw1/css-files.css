@@ -1,0 +1,105 @@
+/* four big containers */
+.big-normal {
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px;
+}
+.big1 {
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px;
+}
+.big2 {
+	/* background-color: aqua; */
+	height: 700px;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px;
+}
+.big3 {
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px;
+}
+
+/* normal box without position */
+.d1-n {
+}
+.d2-n {
+	width: 1000px;
+	/* height: 500px; */
+	position: relative;
+	/* left: 300px; */
+}
+.d3-n {
+	width: 800px;
+	height: 400px;
+	position: relative;
+	/* right: 300px; */
+}
+.d4-n {
+	width: 500px;
+	height: 300px;
+	position: relative;
+	/* left: 400px; */
+}
+
+
+/* Relative position */
+.d1-1 {
+}
+
+.d2-1 {
+	width: 900px;
+	height: 550px;
+	position: relative;
+	left: 300px;
+}
+.d3-1 {
+	width: 800px;
+	height: 400px;
+	position: relative;
+	right: 200px;
+}
+.d4-1 {
+	width: 400px;
+	height: 300px;
+	position: relative;
+	left: 500px;
+}
+
+
+/* Absolute position */
+.d1-2 {
+}
+
+.d2-2 {
+	width: 900px;
+	height: 600px;
+	position: absolute;
+	left: 300px;
+}
+.d3-2 {
+	width: 800px;
+	height: 400px;
+	position: relative;
+	right: 200px;
+}
+.d4-2 {
+	width: 400px;
+	height: 300px;
+	position: relative;
+	left: 500px;
+}
+
+/* float */
+.box {
+	width: 300px;
+	height: 200px;
+	float: left;
+}
+.box2 {
+	width: 300px;
+	height: 200px;
+	float: right;
+}
