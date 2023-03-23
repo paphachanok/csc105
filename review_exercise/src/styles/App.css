@@ -1,0 +1,49 @@
+.App {
+	text-align: center;
+}
+
+/* FavoriteSites */
+.favoriteSites a {
+	color: lightgreen;
+	padding: 0;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.favoriteSites a:visited {
+	color: lightgreen;
+}
+.favoriteSites a:hover{
+	color: red;
+}
+
+
+
+/* Profile */
+.profile section {
+	width: 40%;
+	margin: 20px auto;
+	padding: 20px auto;
+}
+.profile section:hover h2 {
+	color: red;
+	border: 10cap;
+	transition: color 1s;
+
+}
+.profile section:hover {
+	border: thin solid red;
+	transition: border 1s;
+}
+
+/* Gallery */
+.gallery img:hover{
+	transform: scale(1.2);
+	transition: transform 1s;
+}
+.gallery section {
+	margin: 20px auto;
+}
+
