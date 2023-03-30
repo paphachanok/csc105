@@ -1,0 +1,22 @@
+.bigO {
+	position: absolute;
+	top: 100px;
+	left: 300px;
+	display: flex;
+	width: 770px;
+	height: 500px;
+}
+
+.big1 {
+	position: relative;
+	background-color: rgb(252, 187, 187);
+}
+
+.big2 {
+	position: relative;
+	background-color: rgb(251, 248, 199);
+}
+
+img {
+	width: 100px;
+}

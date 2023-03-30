@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Excercise1</title>
+		<!-- <script type="text/javascript" src="ex1.js"></script> -->
+		<script type="text/javascript" src="mentor.js"></script>
+	</head>
+	<body>
+		<!-- <form>
+			<label for="some_text">Please enter some text below:</label>
+				<input type="text" id="some_text"  placeholder="hehe" required>
+			<button onclick="ft_check()" type="button">submit</button>
+		</form> -->
+		<!-- <script>
+			function ft_check() {
+				var input = document.getElementById("some_text").value;
+				if (input.charAt(0) === input.charAt(0).toUpperCase()) {
+					alert("String's first character is uppercase");
+				} else {
+					alert("String's first character is not uppercase.");
+				}
+			}
+		</script> -->
+
+		<!--! mentoring session -->
+		<label for="name">Please enter some text:</label>
+		<input type="text"  id="name" name="name" pattern="[A-Z]+\w+">
+		<input type="submit" onclick="ft_check()">
+		<!-- <script>
+		</script> -->
+	</body>
+</html>
