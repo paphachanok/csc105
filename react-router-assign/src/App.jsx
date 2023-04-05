@@ -1,34 +1,80 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Route, Routes, NavLink, useParams} from 'react-router-dom'
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
+import Profile from "./pages/Profile";
+import Error from "./pages/Error";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [userLogin, setUserLogin] = useState(false)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+	<div className="App">
+		<Routes>
+			<Route exect path="/" element={<Home userLogin={userLogin} setUserLogin={setUserLogin} />} />
+			<Route path="/about" element={<About />} />
+			<Route path="/contact" element={<Contact />} />
+			<Route path="/profile/:id" element={<Profile />} />
+			<Route path="/admin" element={<Admin userLogin={userLogin} setUserLogin={setUserLogin} />} />
+			<Route path="/*" element={<Error />} />
+		</Routes>
+
+		<nav>
+			<NavLink replace to="/" className="inactive-link" >
+			{({ isActive }) =>
+				isActive ? (
+				<p className="active-link">Home</p>
+				) : (
+				<p>Home</p>
+				)
+			}
+			</NavLink>
+
+			<NavLink replace to="/about" className="inactive-link" >
+			{({ isActive }) =>
+				isActive ? (
+				<p className="active-link">About</p>
+				) : (
+				<p>About</p>
+				)
+			}
+			</NavLink>
+
+			<NavLink replace to="/contact" className="inactive-link" >
+			{({ isActive }) =>
+				isActive ? (
+				<p className="active-link">Contact</p>
+				) : (
+				<p>Contact</p>
+				)
+			}
+			</NavLink>
+
+			<NavLink replace to="/profile" className="inactive-link" >
+			{({ isActive }) =>
+				isActive ? (
+				<p className="active-link">Profile</p>
+				) : (
+				<p>Profile</p>
+				)
+			}
+			</NavLink>
+
+			<NavLink replace to="/admin" className="inactive-link" >
+			{({ isActive }) =>
+				isActive ? (
+				<p className="active-link">For admin!!</p>
+				) : (
+				<p>For admin!!</p>
+				)
+			}
+			</NavLink>
+		</nav>
+	</div>
   )
 }
 
